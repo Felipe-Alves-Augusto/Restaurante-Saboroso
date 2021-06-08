@@ -115,6 +115,8 @@ const connection = mysql.createConnection({
         })
 ~~~~
 
+> no código acima retornamos uma Promisse para tratar depois nos arquivos das rotas, ali se no formulario tiver um input id fazemos o update se não fazemos o insert
+
 
 
 
