@@ -115,7 +115,7 @@ const connection = mysql.createConnection({
         })
 ~~~~
 
-> no código acima retornamos uma Promisse para tratar depois nos arquivos das rotas, ali se no formulario tiver um input id fazemos o update se não fazemos o insert
+> no código acima usamos o metodo query para usar as query do banco de dados, esse comando requer a query que você vai utilizar, os parâmetros do formulário, o erro e o results que significa que deu certo sua query e retorno o que você queria.
 
 
 
