@@ -33,15 +33,17 @@
 
 > No código acima é trecho de código do próprio sistema pegamos variável results que foi criada no back-end e transportamos para o frond-end dessa forma, essa variável armazena os resultados que vem do banco de dados, ali na segunda linha de código usamos o dataset para armazenar os dados dessa tr e passamos os dados para string com o __JSON.stringify__ e depois em outro trecho de codigo passamos esses dados para objeto com __JSON.parse__ para poder editar ou excluir esses dados, ali nas td tem o results.alguma coisa que são colunas das tabelas do banco de dados mysql e fazemos isso em várias outras partes do sistema.
 
-> Em umas das td tem a palavra __moment__, o moment é uma biblioteca para formatar datas da forma que você quiser e eu formatei a data que vem do banco de dados para ficar melhor para o usuário ver
+> Em umas das td tem a palavra __moment__, o moment é uma biblioteca para formatar datas da forma que você quiser e eu formatei a data que vem do banco de dados para ficar melhor para o usuário ver.
 ## O que oferecemos em nosso site
-> O projeto restaurante saboroso é a idéia de um site mostrando os serviços que este restaurante oferece, no site também é possível cadastrar seu email para receber novidades do restaurante, você pode mandar uma mensagem passando seu feedback para nós na aba de contatos, na aba menu é possível ver nosso cardapio e esse cardapio é adicionado no site através no painel de controle e na aba reservas e na home você pode fazer uma reserva através do nosso site passando sua indentidade, o dia e o horário da sua reserva
+> O projeto restaurante saboroso é a idéia de um site mostrando os serviços que este restaurante oferece, no site também é possível cadastrar seu email para receber novidades do restaurante, você pode mandar uma mensagem passando seu feedback para nós na aba de contatos, na aba menu é possível ver nosso cardapio e esse cardapio é adicionado no site através no painel de controle e na aba reservas e na home você pode fazer uma reserva através do nosso site passando sua indentidade, o dia e o horário da sua reserva.
 
 ## O que nosso painel de controle consegue fazer ?
 
 > Para acessar o painel é necessário fazer um login então nessa parte trabalhamos com as session em node, para usar session é necessário baixar algumas dependência via terminal com o npm ou yarn o comando é: __npm install express-session__ talvez precise do RedisStore.
 
-> Depois que acessa o painel lá é possível ver quantas __reservas__ foram feitas, quantos __emails__ foram cadastras, quantos __contatos__ foram enviados para nós, quantos itens tem no __menu__ e quantos __usuários__ podem acessar aquele painel e no painel conseguimos listar os dados que os usuários preencheu no site para poder editar ou excluir esses dados.
+> Depois que acessa o painel lá é possível ver quantas __reservas__ foram feitas, quantos __emails__ foram cadastrados, quantos __contatos__ foram enviados para nós, quantos itens tem no __menu__ e quantos __usuários__ podem acessar aquele painel e no painel conseguimos listar os dados que os usuários preencheu no site para poder editar ou excluir esses dados.
+
+> No painel na aba usuários tem um botão __alterar senha__ nesse botão tem todo aquele sistema de esqueceu sua senha, lá pede para o usuário digitar uma nova senha e confirmar em baixo e tem a validação se caso as senhas não forem iguais nos dois inputs vai gerar um erro.
 
 > Para trabalhar com banco de dados mysql no node precisamos baixar a dependência mysql2 o comando é: __npm install --save mysql2__ e para poder usar mesmo precisamos configurar o banco com este código:
 
