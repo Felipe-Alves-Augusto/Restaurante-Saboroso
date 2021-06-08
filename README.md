@@ -37,4 +37,6 @@
 
 > Para acessar o painel é necessário fazer um login então nessa parte trabalhamos com as session em node, para usar session é necessário baixar algumas depêndencias via terminal com o npm ou yarn o comando é: __npm install express-session__ talvez precise do RedisStore.
 
-> Depois que acessa o painel lá é possível ver quantas __reservas__ foram feitas, quantos __emails__ foram cadastras e quantos __contatos__ foram enviados para nós
+> Depois que acessa o painel lá é possível ver quantas __reservas__ foram feitas, quantos __emails__ foram cadastras, quantos __contatos__ foram enviados para nós, quantos itens tem no __menu__ e quantos __usuários__ podem acessar aquele painel.
+
+[Imagem da página inicial do painel de controle] (/ paginaInicial.png "Página inicial do painel")
