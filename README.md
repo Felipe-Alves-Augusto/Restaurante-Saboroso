@@ -121,6 +121,53 @@ const connection = mysql.createConnection({
 
 > no código acima usamos o método query para usar as query do banco de dados, esse comando requer a query que você vai utilizar, os parâmetros do formulário, o erro e o results que significa que deu certo sua query e retorno o que você queria, e com esse método é possivel usar qualquer query da linguagem SQL.
 
+## Chart JS
+
+> No painel usamos a biblioteca do chart js para inserir graficos em nosso sistema e funcionar da seguinte forma: quando você vai fazer a reserva nos pedimos a data que você quer para reserva então vem o dia, mês e ano depois pegamos a tabela  onde fica as reservas e usamos a query __SELECT__ com o __BETWEEN__ e usamos dois input para filtrar essas datas então você pode filtrar as reservas da data 01/01/2020 entre 01/01/2021 e o resultado jogamos no gráfico ai vai pegar quantas reservas teve aquele mês daquele ano.
+
+> query para fazer o gráfico funcionar:
+
+>> 
+~~~~
+  connection.query(`
+            
+            SELECT 
+            concat(YEAR(date), '-', MONTH(date)) AS date,
+            COUNT(*) AS total,
+            SUM(people) / COUNT(*) AS avg_people
+            FROM tb_reservations
+            WHERE 
+                date between ? AND ?
+                group by YEAR(date) DESC, MONTH(date) DESC
+                ORDER BY YEAR(date) DESC, MONTH(date) DESC
+            
+            `,[
+                req.query.start,
+                req.query.end
+            ],(error,results)=>{
+
+                if(error){
+                    reject(error);
+
+                } else {
+                    let month = [];
+                    let values = [];
+
+
+                    results.forEach(row=>{
+
+                        month.push(moment(row.date).format('MMMM YYYY'))
+                        values.push(row.total)
+
+                    })
+
+                    resolve({
+                        month,
+                        values
+                    });
+~~~~
+
+
 
 
 
