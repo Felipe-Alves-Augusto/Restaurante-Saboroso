@@ -12,7 +12,7 @@
 
 > Exemplo de um código na engine EJS: 
 
- ~~~~           <% reservas.forEach(results => { %> 
+>> ~~~~           <% reservas.forEach(results => { %> 
                 <tr data-results="<%=JSON.stringify(results); %> ">
                   <td><%= results.id %> </td>
                   <td><%= results.name %> </td>
@@ -27,6 +27,6 @@
                 <%  }) %> ~~~~
                 
 
->> No código acima pegamos variável results que foi criada no back-end e transportamos para o frond-end dessa forma, essa variável armazena os resultados que vem do banco de dados, ali na segunda linha de código usamos o dataset para armazenar os dados dessa tr e passamos os dados para string com o JSON.stringify e depois em outro trecho de codigo passamos esses dados para objeto com JSON.parse para poder editar ou excluir esses dados, ali nas td tem o results.alguma coisa que são colunas das tabelas do banco de dados mysql.
+> No código acima pegamos variável results que foi criada no back-end e transportamos para o frond-end dessa forma, essa variável armazena os resultados que vem do banco de dados, ali na segunda linha de código usamos o dataset para armazenar os dados dessa tr e passamos os dados para string com o JSON.stringify e depois em outro trecho de codigo passamos esses dados para objeto com JSON.parse para poder editar ou excluir esses dados, ali nas td tem o results.alguma coisa que são colunas das tabelas do banco de dados mysql.
 ## O que oferecemos em nosso site
 > O projeto restaurante saboroso é a idéia de um site mostrando os serviços que este restaurante oferece, no site também é possível cadastrar seu email para receber novidades do restaurante, você pode mandar uma mensagem passando seu feedback para nós na aba de contatos, na aba menu é possível ver nosso cardapio e esse cardapio é adicionado no site através no painel de controle e na aba reservas e na home você pode fazer uma reserva através do nosso site passando sua indentidade, o dia e o horário da sua reserva
