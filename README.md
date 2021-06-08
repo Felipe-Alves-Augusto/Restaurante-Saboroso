@@ -40,9 +40,9 @@
 > Depois que acessa o painel lá é possível ver quantas __reservas__ foram feitas, quantos __emails__ foram cadastras, quantos __contatos__ foram enviados para nós, quantos itens tem no __menu__ e quantos __usuários__ podem acessar aquele painel, no painel conseguimos listar os dados que os usuários preencheu no site para poder editar ou excluir esses dados.
 
 > Para trabalhar com banco de dados mysql no node precisamos baixar a dependência mysql2 o comando é: __npm install --save mysql2__ e para poder usar mesmo precisamos configurar o banco com este código:
+
 >> ```const mysql = require('mysql2');
  
-// create the connection to database
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
