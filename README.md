@@ -41,7 +41,8 @@
 
 > Para trabalhar com banco de dados mysql no node precisamos baixar a dependência mysql2 o comando é: __npm install --save mysql2__ e para poder usar mesmo precisamos configurar o banco com este código:
 
->> ~~~~ 
+>> 
+~~~~ 
 const mysql = require('mysql2');
 // fazendo o node conectar com o mysql
 const connection = mysql.createConnection({
