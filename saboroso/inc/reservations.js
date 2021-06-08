@@ -172,7 +172,7 @@ module.exports = {
             SUM(people) / COUNT(*) AS avg_people
             FROM tb_reservations
             WHERE 
-                date between '2017-01-01' AND '2018-03-28'
+                date between ? AND ?
                 group by YEAR(date) DESC, MONTH(date) DESC
                 ORDER BY YEAR(date) DESC, MONTH(date) DESC
             
