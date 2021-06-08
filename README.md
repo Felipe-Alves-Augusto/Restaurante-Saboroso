@@ -12,7 +12,7 @@
 
 > Exemplo de um código na engine EJS: 
 
->> ~~~~           <% reservas.forEach(results => { %> 
+> ~~~~           <% reservas.forEach(results => { %> 
                 <tr data-results="<%=JSON.stringify(results); %> ">
                   <td><%= results.id %> </td>
                   <td><%= results.name %> </td>
