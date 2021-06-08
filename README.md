@@ -27,7 +27,7 @@
                 <%  }) %> ```
                 
 
-> No código acima é trecho de código do próprio sistema pegamos variável results que foi criada no back-end e transportamos para o frond-end dessa forma, essa variável armazena os resultados que vem do banco de dados, ali na segunda linha de código usamos o dataset para armazenar os dados dessa tr e passamos os dados para string com o __JSON.stringify__ e depois em outro trecho de codigo passamos esses dados para objeto com __JSON.parse__ para poder editar ou excluir esses dados, ali nas td tem o results.alguma coisa que são colunas das tabelas do banco de dados mysql.
+> No código acima é trecho de código do próprio sistema pegamos variável results que foi criada no back-end e transportamos para o frond-end dessa forma, essa variável armazena os resultados que vem do banco de dados, ali na segunda linha de código usamos o dataset para armazenar os dados dessa tr e passamos os dados para string com o __JSON.stringify__ e depois em outro trecho de codigo passamos esses dados para objeto com __JSON.parse__ para poder editar ou excluir esses dados, ali nas td tem o results.alguma coisa que são colunas das tabelas do banco de dados mysql e fazemos isso em várias outras partes do sistema.
 
 > Em umas das td tem a palavra __moment__, o moment é uma biblioteca para formatar datas da forma que você quiser e eu formatei a data que vem do banco de dados para ficar melhor para o usuário ver
 ## O que oferecemos em nosso site
@@ -115,7 +115,7 @@ const connection = mysql.createConnection({
         })
 ~~~~
 
-> no código acima usamos o metodo query para usar as query do banco de dados, esse comando requer a query que você vai utilizar, os parâmetros do formulário, o erro e o results que significa que deu certo sua query e retorno o que você queria.
+> no código acima usamos o método query para usar as query do banco de dados, esse comando requer a query que você vai utilizar, os parâmetros do formulário, o erro e o results que significa que deu certo sua query e retorno o que você queria, e com esse método é possivel usar qualquer query da linguagem SQL.
 
 
 
