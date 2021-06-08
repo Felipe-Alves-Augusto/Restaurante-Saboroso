@@ -47,6 +47,8 @@
 
 > No painel na aba usuários tem um botão __alterar senha__ nesse botão tem todo aquele sistema de esqueceu sua senha, lá pede para o usuário digitar uma nova senha e confirmar em baixo e tem a validação se caso as senhas não forem iguais nos dois inputs vai gerar um erro.
 
+> Na aba menus e reservas é possível fazer um novo cadastro então usamos o insert para fazer essa ação.
+
 > Para trabalhar com banco de dados mysql no node precisamos baixar a dependência mysql2 o comando é: __npm install --save mysql2__ e para poder usar mesmo precisamos configurar o banco com este código:
 
 >> 
