@@ -1,0 +1,22 @@
+version: "2"
+plugins:
+  duplication:
+    enabled: true
+    config:
+      languages:
+        - javascript
+  fixme:
+    enabled: true
+checks:
+  method-complexity:
+    config:
+      threshold: 6
+exclude_patterns:
+  - "dist/"
+  - "docs/"
+  - "scripts/"
+  - "test/"
+  - "*.js"
+  - "*.json"
+  - "*.md"
+  - ".*"
