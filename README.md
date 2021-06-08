@@ -6,7 +6,7 @@
  
 > Na parte do Back-end é onde faz todo o sistema funcionar, usamos o poder do node junto com o express trabalhando com rotas, banco de dados mysql, formidable para envio de formulários e uplod de imagens e para tudo isso utilizando a engine EJS.
 
-> ### O que é a Engine EJS?
+ ### O que é a Engine EJS?
 
 >> O EJS é uma engine de visualização, com ele conseguimos de uma maneira fácil e simples transportar dados do back-end para o front-end, basicamente conseguimos utilizar códigos em javascript no html de nossas páginas.
 
