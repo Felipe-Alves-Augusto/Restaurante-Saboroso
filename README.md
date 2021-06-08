@@ -25,6 +25,7 @@
                         class="fa fa-trash"></i> Excluir</button></td>
                 </tr>
                 <%  }) %> ~~~~
+                
 
 > No código acima pegamos variável results que foi criada no back-end e transportamos para o frond-end dessa forma, essa variável armazena os resultados que vem do banco de dados, ali na segunda linha de código usamos o dataset para armazenar os dados dessa tr e passamos os dados para string com o JSON.stringify e depois em outro trecho de codigo passamos esses dados para objeto com JSON.parse para poder editar ou excluir esses dados, ali nas td tem o results.alguma coisa que são colunas das tabelas do banco de dados mysql.
 ## O que oferecemos em nosso site
