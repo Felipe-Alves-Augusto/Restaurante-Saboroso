@@ -34,3 +34,5 @@
 > O projeto restaurante saboroso é a idéia de um site mostrando os serviços que este restaurante oferece, no site também é possível cadastrar seu email para receber novidades do restaurante, você pode mandar uma mensagem passando seu feedback para nós na aba de contatos, na aba menu é possível ver nosso cardapio e esse cardapio é adicionado no site através no painel de controle e na aba reservas e na home você pode fazer uma reserva através do nosso site passando sua indentidade, o dia e o horário da sua reserva
 
 ## O que nosso painel de controle consegue fazer ?
+
+> Para acessar o painel é necessário fazer um login então nessa parte trabalhamos com as session em node, para usar session é necessário baixar algumas depêndencias via terminal com o npm ou yarn o comando é ~~~~  npm install express-session ~~~~
