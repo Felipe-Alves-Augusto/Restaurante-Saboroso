@@ -53,6 +53,67 @@ const connection = mysql.createConnection({
     multipleStatements: true
   });
   ~~~~
+  
+  > Usando as query no banco insert e update:
+
+~~~~
+ return new Promise((resolve, reject)=>{
+
+            let date = campos.date.split('/');
+
+            campos.date = `${date[2]}-${date[1]}-${date[0]}`;
+
+            let query, params;
+
+            if(parseInt(campos.id) > 0){
+
+                query = `
+                
+                    UPDATE tb_reservations SET name = ?,
+                    email = ?,
+                    people = ?,
+                    date = ?,
+                    time = ?
+                    WHERE id = ?
+                
+                `;
+                params = [
+                    campos.name,
+                    campos.email,
+                    campos.people,
+                    campos.date,
+                    campos.time,
+                    campos.id
+                ];
+
+            } else {
+
+                query = `
+                    INSERT INTO tb_reservations (name, email, people, date, time) VALUES (?,?,?,?,?)
+                
+                `;
+                params = [
+                    campos.name,
+                    campos.email,
+                    campos.people,
+                    campos.date,
+                    campos.time
+                ];
+
+            };
+
+            connection.query(query,params,(error,results)=>{
+
+                if(error){
+                    reject(error);
+                }
+
+                resolve(results);
+                
+            })
+
+        })
+~~~~
 
 
 
