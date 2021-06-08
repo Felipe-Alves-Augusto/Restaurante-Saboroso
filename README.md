@@ -43,7 +43,7 @@
 
 > Depois que acessa o painel lá é possível ver quantas __reservas__ foram feitas, quantos __emails__ foram cadastrados, quantos __contatos__ foram enviados para nós, quantos itens tem no __menu__ e quantos __usuários__ podem acessar aquele painel e também conseguimos listar os dados que os usuários preencheu no site para poder editar ou excluir esses dados, em todas abas tem como editar e excluir as linhas que contém os dados para fazer isso tem um botão para cada ação.
 
-![Página Inicial](img/paginaInicial.png)
+![Página Inicial](img/pagina2.png)
 
 > No painel na aba usuários tem um botão __alterar senha__ nesse botão tem todo aquele sistema de esqueceu sua senha, lá pede para o usuário digitar uma nova senha e confirmar em baixo e tem a validação se caso as senhas não forem iguais nos dois inputs vai gerar um erro.
 
