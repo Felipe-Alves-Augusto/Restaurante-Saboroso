@@ -39,4 +39,4 @@
 
 > Depois que acessa o painel lá é possível ver quantas __reservas__ foram feitas, quantos __emails__ foram cadastras, quantos __contatos__ foram enviados para nós, quantos itens tem no __menu__ e quantos __usuários__ podem acessar aquele painel.
 
-[Imagem da página inicial do painel de controle] (/ paginaInicial.png "Página inicial do painel")
+Logotipo:! [Alt] (/paginaInicial.png "Página inicial do painel")
