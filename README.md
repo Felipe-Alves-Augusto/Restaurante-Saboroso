@@ -41,7 +41,7 @@
 
 > Para acessar o painel é necessário fazer um login então nessa parte trabalhamos com as session em node, para usar session é necessário baixar algumas dependência via terminal com o npm ou yarn o comando é: __npm install express-session__ talvez precise do RedisStore.
 
-> Depois que acessa o painel lá é possível ver quantas __reservas__ foram feitas, quantos __emails__ foram cadastrados, quantos __contatos__ foram enviados para nós, quantos itens tem no __menu__ e quantos __usuários__ podem acessar aquele painel e no painel conseguimos listar os dados que os usuários preencheu no site para poder editar ou excluir esses dados.
+> Depois que acessa o painel lá é possível ver quantas __reservas__ foram feitas, quantos __emails__ foram cadastrados, quantos __contatos__ foram enviados para nós, quantos itens tem no __menu__ e quantos __usuários__ podem acessar aquele painel e no painel conseguimos listar os dados que os usuários preencheu no site para poder editar ou excluir esses dados em todas aba tem como editar e excluir os dados tem um botão para cada ação 
 
 > No painel na aba usuários tem um botão __alterar senha__ nesse botão tem todo aquele sistema de esqueceu sua senha, lá pede para o usuário digitar uma nova senha e confirmar em baixo e tem a validação se caso as senhas não forem iguais nos dois inputs vai gerar um erro.
 
