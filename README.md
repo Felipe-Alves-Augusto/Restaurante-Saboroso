@@ -175,6 +175,10 @@ const connection = mysql.createConnection({
                     });
 ~~~~
 
+## Socket.io
+
+> Usando o socket.io conseguimos deixar nossa aplicação em tempo real, então cada ação que ocorrer dentro do site vai mudar em tempo real
+
 
 
 
