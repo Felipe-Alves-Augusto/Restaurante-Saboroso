@@ -208,6 +208,38 @@ module.exports = {
 
         })
 
+    },
+
+
+    dashboard(){
+
+        return new Promise((resolve,reject)=>{
+
+
+            connection.query(`
+            
+            SELECT
+            (SELECT COUNT(*) FROM tb_contacts) AS nrcontacts,
+            (SELECT COUNT(*) FROM tb_menus) AS nrmenus,
+            (SELECT COUNT(*) FROM tb_reservations) AS nrreservations,
+            (SELECT COUNT(*) FROM tb_users) AS nrusers,
+            (SELECT COUNT(*) FROM tb_emails) AS nremails;
+            
+            `,(error,results)=>{
+
+                if(error){
+
+                    reject(error);
+
+                } else {
+                    
+                    resolve(results[0]);
+                }
+
+            })
+
+        })
+
     }
 
 

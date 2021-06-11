@@ -7,7 +7,11 @@ let emails = require('./../inc/email');
 
 
 
-/* GET home page. */
+
+
+module.exports = (io)=>{
+
+  /* GET home page. */
 router.get('/', function(req, res, next) {
 
   emails.render(req,res);
@@ -23,6 +27,8 @@ router.post('/',(req,res,next)=>{
   } else {
 
     emails.save(req.body).then(results=>{
+
+      io.emit('Dashboard update');
 
       emails.render(req,res,null, "E-mail cadastrado com sucesso !");
 
@@ -59,6 +65,10 @@ router.post('/contact',(req,res,next)=>{
   } else{
 
       contact.TbContacts(req.body).then(results=>{
+
+        req.body = {};
+        
+        io.emit('Dashboard update');
 
         contact.render(req,res, null, "Enviado com sucesso!");
 
@@ -124,6 +134,10 @@ router.post('/reservation',(req,res,next)=>{
 
     reservations.save(req.body).then(results=>{
 
+      req.body = {};
+
+      io.emit('Dashboard update');
+
       reservations.render(req,res, null, "Reserva realizada com sucesso!");
 
     }).catch(error=>{
@@ -146,4 +160,6 @@ router.get('/services',(req,res,next)=>{
 
 })
 
-module.exports = router;
+  return router;
+
+};

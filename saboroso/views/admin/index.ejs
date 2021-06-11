@@ -49,7 +49,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Reservas</span>
-                <span class="info-box-number"><%= results.nrreservations %> </span>
+                <span class="info-box-number" id="nrreservations"><%= results.nrreservations %> </span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -64,7 +64,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Contatos</span>
-                <span class="info-box-number"><%= results.nrcontacts %> </span>
+                <span class="info-box-number" id="nrcontacts"><%= results.nrcontacts %> </span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -79,7 +79,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">E-mails</span>
-                <span class="info-box-number"><%= results.nremails %> </span>
+                <span class="info-box-number" id="nremails"><%= results.nremails %> </span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -98,7 +98,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Menu</span>
-                <span class="info-box-number"><%= results.nrmenus %> </span>
+                <span class="info-box-number" id="nrmenus"><%= results.nrmenus %> </span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -113,7 +113,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Usuários</span>
-                <span class="info-box-number"><%= results.nrusers %> </span>
+                <span class="info-box-number" id="nrusers"><%= results.nrusers %> </span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -131,7 +131,9 @@
     <%- include('components/footer') %> 
 
   </div>
-
+  <audio id="sino">
+    <source src="audio/sino.mp3">
+  </audio>
   <!-- jQuery 3 -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <!-- Bootstrap 3.3.7 -->
@@ -160,6 +162,39 @@
         }
       })
     })
+  </script>
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script>
+
+    function refreshDashboard(){
+
+      fetch("/admin/dashboard")
+          .then(response => response.json())
+          .then(json => {
+
+            document.getElementById('nrreservations').innerHTML = json.nrreservations;
+            document.getElementById('nrcontacts').innerHTML = json.nrcontacts;
+            document.getElementById('nremails').innerHTML = json.nremails;
+            document.getElementById('nrmenus').innerHTML = json.nrmenus;
+            document.getElementById('nrusers').innerHTML = json.nrusers;
+            
+
+          })
+
+       
+
+    }
+
+    let socket = io();
+
+    socket.on("Dashboard update",(data)=>{
+
+      refreshDashboard();
+
+    })
+
   </script>
 
 </body>
